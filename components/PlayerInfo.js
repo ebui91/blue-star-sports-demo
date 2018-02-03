@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TextInput, Button, Keyboard } from 'react-native';
+import { View, Text, StyleSheet, TextInput, TouchableOpacity, Keyboard } from 'react-native';
 import PlayerCard from './PlayerCard.js';
 
 export default class PlayerInfo extends Component {
@@ -119,10 +119,11 @@ export default class PlayerInfo extends Component {
         />
       </View>
 
-      <Button
-        title= 'Add Player'
-        onPress= { ()=> {this.addToTeam()} }
-      />
+      <TouchableOpacity
+        style= {styles.button}
+        onPress= { ()=> {this.addToTeam()} }>
+        <Text style= {{ color: 'white', fontWeight: 'bold' }}>ADD PLAYER</Text>
+      </TouchableOpacity>
     </View>
     )
   }
@@ -133,7 +134,8 @@ const styles= StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'space-around',
-    alignItems: 'stretch'
+    alignItems: 'center',
+    backgroundColor: 'grey'
   },
   infoCol: {
     flexDirection: 'row',
@@ -147,5 +149,15 @@ const styles= StyleSheet.create({
     width: '30%',
     margin: 3,
     color: '#F2F2F2'
+  },
+  button: {
+    height: 35,
+    width: 120,
+    margin: 'auto',
+    backgroundColor: '#122B4F',
+    borderRadius: 5,
+    padding: 5,
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 });

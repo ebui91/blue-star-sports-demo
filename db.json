@@ -1,0 +1,11 @@
+{
+  "team": [
+      { "firstName": "Ezekiel",
+        "lastName": "Elliot",
+        "imgURL": "http://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3051392.png&w=350&h=254",
+        "team": "Dallas Cowboys",
+        "number": "21",
+        "position": "RB"
+      }
+    ]
+}
