@@ -24,6 +24,7 @@ export default class Team extends Component {
 
     return(
       <View style= {styles.teamContainer}>
+        <Text>TEAM</Text>
         {players}
       </View>
     )

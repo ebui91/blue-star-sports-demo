@@ -73,7 +73,7 @@ export default class PlayerInfo extends Component {
   render(){
     return(
       <View style={styles.infoContainer}>
-        <View style={styles.infoCol}>
+          <Text style={styles.inputHeader}>First Name</Text>
           <TextInput
             style={styles.inputField}
             placeholder= 'First Name'
@@ -81,6 +81,7 @@ export default class PlayerInfo extends Component {
             onChangeText={ input=> this.handleFirstName(input) }
           />
 
+        <Text style={styles.inputHeader}>Last Name</Text>
           <TextInput
             style={styles.inputField}
             placeholder= 'Last Name'
@@ -88,15 +89,15 @@ export default class PlayerInfo extends Component {
             onChangeText={ input=> this.handleLastName(input) }
           />
 
+        <Text style={styles.inputHeader}>Image URL</Text>
           <TextInput
             style={styles.inputField}
             placeholder= 'Image URL...'
             value= {this.state.imgURL}
             onChangeText={ input=> this.handleURL(input) }
           />
-      </View>
 
-      <View style={styles.infoCol}>
+        <Text style={styles.inputHeader}>Team</Text>
         <TextInput
           style={styles.inputField}
           placeholder= 'Team'
@@ -104,6 +105,7 @@ export default class PlayerInfo extends Component {
           onChangeText={ input=> this.handleTeam(input) }
         />
 
+      <Text style={styles.inputHeader}>Player Number</Text>
         <TextInput
           style={styles.inputField}
           placeholder= '#'
@@ -111,13 +113,13 @@ export default class PlayerInfo extends Component {
           onChangeText={ input=> this.handleNumber(input) }
         />
 
+      <Text style={styles.inputHeader}>Position</Text>
         <TextInput
           style={styles.inputField}
           placeholder= 'Position'
           value= {this.state.position}
           onChangeText={ input=> this.handlePosition(input) }
         />
-      </View>
 
       <TouchableOpacity
         style= {styles.button}
@@ -131,23 +133,23 @@ export default class PlayerInfo extends Component {
 
 const styles= StyleSheet.create({
   infoContainer: {
-    flex: 1,
+    marginTop: 30,
+    flex: 0.9,
     flexDirection: 'column',
     justifyContent: 'space-around',
     alignItems: 'center',
-    backgroundColor: 'grey'
+    backgroundColor: '#111'
   },
-  infoCol: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'stretch'
+  inputHeader: {
+    fontSize: 16,
+    color: '#F2F2F2'
   },
   inputField: {
     borderStyle: 'solid',
     borderColor: '#122B4F',
-    borderWidth: 1,
-    width: '30%',
-    margin: 3,
+    borderWidth: 2,
+    height: 30,
+    width: '75%',
     color: '#F2F2F2'
   },
   button: {
